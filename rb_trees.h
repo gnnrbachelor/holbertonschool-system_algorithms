@@ -1,18 +1,21 @@
-#ifndef RB_TREES_H
-#define RB_TREES_H
+#ifndef _RB_TREES_H_
+#define _RB_TREES_H_
 
+#include <stdlib.h>
+#include <stddef.h>
 
 /**
  * enum rb_color_e - Possible color of a Red-Black tree
  *
  * @RED: 0 -> Red node
  * @BLACK: 1 -> Black node
+ * @DOUBLE_BLACK: 2 -> Double-black node (used for deletion)
  */
 typedef enum rb_color_e
 {
-    RED = 0,
-    BLACK,
-    DOUBLE_BLACK
+	RED = 0,
+	BLACK,
+	DOUBLE_BLACK
 } rb_color_t;
 
 /**
@@ -26,11 +29,13 @@ typedef enum rb_color_e
  */
 typedef struct rb_tree_s
 {
-    int n;
-    rb_color_t color;
-    struct rb_tree_s *parent;
-    struct rb_tree_s *left;
-    struct rb_tree_s *right;
+	int n;
+	rb_color_t color;
+	struct rb_tree_s *parent;
+	struct rb_tree_s *left;
+	struct rb_tree_s *right;
 } rb_tree_t;
 
-#endif
+rb_tree_t *rb_tree_node(rb_tree_t *parent, int value, rb_color_t color);
+
+#endif /* _RB_TREES_H_ */
