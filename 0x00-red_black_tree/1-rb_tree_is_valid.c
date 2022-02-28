@@ -3,6 +3,7 @@
 /**
  * rb_tree_is_valid - Checks for  red black tree
  * @tree: Pointer to root of tree
+ * Return: 1 or 0
  *
  */
 
@@ -10,12 +11,12 @@ int rb_tree_is_valid(const rb_tree_t *tree)
 {
 
 	size_t left = 0, right = 0;
-	static int rec_switch = 0;
+	static int rec_switch = 1;
 
 	if (rec_switch == 0 && tree->color != BLACK)
 		return (0);
 
-	rec_switch = 1;
+	rec_switch = 0;
 
 	if (!tree)
 		return (0);
