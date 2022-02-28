@@ -13,7 +13,7 @@ int rb_tree_is_valid(const rb_tree_t *tree)
 	size_t left = 0, right = 0;
 	static int rec_switch = 1;
 
-	if (rec_switch == 0 && tree->color != BLACK)
+	if (rec_switch == 1 && tree->color != BLACK)
 		return (0);
 
 	rec_switch = 0;
