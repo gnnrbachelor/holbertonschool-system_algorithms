@@ -1,5 +1,13 @@
 #include "rb_trees.h"
 
+/**
+ * rb_tree_node - Inits node
+ * @parent: Parent
+ * @value: Value
+ * @color: Color
+ * Return: Pointer to new node
+ */
+
 rb_tree_t *rb_tree_node(rb_tree_t *parent, int value, rb_color_t color)
 {
 	rb_tree_t *n_node;
