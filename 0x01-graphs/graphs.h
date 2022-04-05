@@ -1,4 +1,8 @@
+#ifndef GRAPHS_H
+#define GRAPHS_H
 
+#include <stdlib.h>
+#include <stdio.h>
 
 /**
  * enum edge_type_e - Enumerates the different types of
@@ -62,3 +66,9 @@ typedef struct graph_s
     size_t      nb_vertices;
     vertex_t    *vertices;
 } graph_t;
+
+graph_t *graph_create(void);
+
+
+
+#endif
