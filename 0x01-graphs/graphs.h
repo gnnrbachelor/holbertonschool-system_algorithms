@@ -1,6 +1,7 @@
 #ifndef GRAPHS_H
 #define GRAPHS_H
 
+#include <string.h>
 #include <stdlib.h>
 #include <stdio.h>
 
@@ -68,7 +69,9 @@ typedef struct graph_s
 } graph_t;
 
 graph_t *graph_create(void);
-
-
+vertex_t *vertex_init(const char *str);
+vertex_t *graph_add_vertex(graph_t *graph, const char *str);
+void graph_display(const graph_t *graph);
+int graph_add_edge(graph_t *graph, const char *src, const char *dest, edge_type_t type);
 
 #endif
