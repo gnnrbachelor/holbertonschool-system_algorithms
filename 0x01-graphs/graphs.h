@@ -75,6 +75,8 @@ void graph_display(const graph_t *graph);
 int graph_add_edge(graph_t *graph, const char *src, const char *dest, edge_type_t type);
 int init_edge(graph_t *graph, vertex_t *src, vertex_t *dest);
 void graph_delete(graph_t *graph);
-
+size_t depth_first_traverse(const graph_t *graph, void (*action)(const vertex_t *v, size_t depth));
+vertex_t *get_vertex_by_index(const graph_t *graph, size_t index);
+void dfs_recursive(int index, size_t *visited, size_t c_depth, size_t *depth, const graph_t *graph, void (*action)(const vertex_t *v, size_t c_depth));
 
 #endif
