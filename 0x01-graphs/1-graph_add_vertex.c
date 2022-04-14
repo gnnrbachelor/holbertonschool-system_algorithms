@@ -1,5 +1,12 @@
 #include "graphs.h"
 
+/**
+ * vertex_init - Initializes graph
+ * @str: str
+ * Return: pointer to new node
+ *
+ */
+
 vertex_t *vertex_init(const char *str)
 {
 	vertex_t *node = malloc(sizeof(vertex_t));
@@ -15,6 +22,16 @@ vertex_t *vertex_init(const char *str)
 	return (node);
 
 }
+
+/**
+ * graph_add_vertex - Adds vertex
+ * @graph: pointer to graph
+ * @str: str
+ * Return: pointer to new node
+ *
+ */
+
+
 
 vertex_t *graph_add_vertex(graph_t *graph, const char *str)
 {
