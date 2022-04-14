@@ -1,5 +1,17 @@
 #include "graphs.h"
 
+/**
+ * graph_add_edge - Adds edge
+ * @graph: pointer to graph
+ * @src: Src
+ * @dest: Dest
+ * @type: Type
+ * Return: 1 or 0
+ *
+ */
+
+
+
 int graph_add_edge(graph_t *graph, const char *src, const char *dest, edge_type_t type)
 {
 	vertex_t *temp, *src_vert = NULL, *dest_vert = NULL;
@@ -25,6 +37,17 @@ int graph_add_edge(graph_t *graph, const char *src, const char *dest, edge_type_
 			return (0);
 	return (1);
 }
+
+/**
+ * init_edge - Initializes edge
+ * @graph: Pointer to graph
+ * @src: Src
+ * @dest: Dest
+ * Return: 1 or 0
+ *
+ */
+
+
 
 int init_edge(graph_t *graph, vertex_t *src, vertex_t *dest)
 {

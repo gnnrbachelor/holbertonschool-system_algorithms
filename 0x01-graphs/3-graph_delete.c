@@ -1,5 +1,11 @@
 #include "graphs.h"
 
+/**
+ * graph_delete - Deletes graph
+ * @graph: Pointer to graph
+ * Return: Void
+ */
+
 void graph_delete(graph_t *graph)
 {
 	vertex_t *temp_vert;
