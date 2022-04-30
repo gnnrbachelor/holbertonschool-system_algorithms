@@ -14,18 +14,13 @@ binary_tree_node_t *heap_insert(heap_t *heap, void *data)
 	size_t p_code = 0, p_i = 0;
 	void *temp;
 
-
 	if (!heap)
 		return (NULL);
-
 	n_node = binary_tree_node(NULL, data);
-
 	if (!n_node)
 		return (NULL);
-
 	p_i = ++heap->size / 2;
 	p_code = find_sig(p_i);
-
 	if (!heap->root)
 		return (heap->root = n_node);
 	for (p = heap->root; p_code; p_code >>= 1)
@@ -35,16 +30,12 @@ binary_tree_node_t *heap_insert(heap_t *heap, void *data)
 		else
 			p = p->left;
 	}
-
 	n_node->parent = p;
-
 	if (heap->size & 1)
 		p->right = n_node;
 	else
 		p->left = n_node;
-
 	index = n_node;
-
 	while (index->parent && heap->data_cmp(index->parent->data, index->data) > 0)
 	{
 		temp = index->data;
@@ -73,5 +64,4 @@ size_t find_sig(size_t num)
 	num = num + 1;
 	return (num >> 2);
 }
-
 
