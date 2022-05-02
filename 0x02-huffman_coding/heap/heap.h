@@ -39,6 +39,7 @@ heap_t *heap_create(int (*data_cmp)(void *, void *));
 binary_tree_node_t *binary_tree_node(binary_tree_node_t *parent, void *data);
 binary_tree_node_t *heap_insert(heap_t *heap, void *data);
 size_t find_sig(size_t num);
-
+void *heap_extract(heap_t *heap);
+void heapify(heap_t *heap);
 
 #endif
