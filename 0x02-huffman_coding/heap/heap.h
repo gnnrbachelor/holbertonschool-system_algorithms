@@ -41,5 +41,6 @@ binary_tree_node_t *heap_insert(heap_t *heap, void *data);
 size_t find_sig(size_t num);
 void *heap_extract(heap_t *heap);
 void heapify(heap_t *heap);
+void heap_delete(heap_t *heap, void (*free_data)(void *));
 
 #endif
