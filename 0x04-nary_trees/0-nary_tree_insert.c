@@ -16,7 +16,7 @@ nary_tree_t *nary_tree_insert(nary_tree_t *parent, char const *str)
 	if (!n_node)
 		return (NULL);
 
-	n_node->content = strdup(str); 
+	n_node->content = strdup(str);
 	if (!n_node->content)
 		return (NULL);
 
@@ -32,9 +32,9 @@ nary_tree_t *nary_tree_insert(nary_tree_t *parent, char const *str)
 	}
 	else
 		n_node->next = NULL;
-	
+
 	return (n_node);
-	
+
 }
 
 
