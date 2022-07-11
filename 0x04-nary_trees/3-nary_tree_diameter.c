@@ -36,6 +36,13 @@ static int get_diameter(nary_tree_t *root)
 
 }
 
+/**
+ * nary_tree_diameter - Gets diameter
+ * @root: Root
+ * Return: Diameter
+ *
+ */
+
 
 size_t nary_tree_diameter(nary_tree_t const *root)
 {
