@@ -24,5 +24,5 @@ int path_exists(nary_tree_t const *root, char const * const *path)
 			return (0);
 	}
 	return (1);
-	
+
 }
