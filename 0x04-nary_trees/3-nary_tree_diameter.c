@@ -2,6 +2,12 @@
 
 static int max_d;
 
+/**
+ * get_diameter - Gets diamater
+ * @root: Root
+ * Return: Diameter
+ *
+ */
 
 static int get_diameter(nary_tree_t *root)
 {
@@ -27,7 +33,7 @@ static int get_diameter(nary_tree_t *root)
 		}
 		else if (diameter > max2)
 			max2 = diameter;
-	
+
 	}
 	if ((max1 + max2 + 1) > max_d)
 		max_d = max1 + max2 + 1;
